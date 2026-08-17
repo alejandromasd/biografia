@@ -155,18 +155,15 @@ h1 {
 }
 
 .profile-card__mark {
-  display: grid;
-  place-items: center;
-  width: 96px;
+  display: block;
+  width: 136px;
   aspect-ratio: 1;
   border: 1px solid rgba(124, 92, 46, 0.18);
   border-radius: 50%;
-  background: var(--accent-soft);
-  font-family: "Fraunces", serif;
-  font-size: clamp(2.6rem, 6vw, 3.4rem);
-  font-weight: 600;
-  letter-spacing: -0.08em;
-  color: var(--accent);
+  object-fit: cover;
+  object-position: center;
+  background: var(--surface);
+  padding: 0;
 }
 
 .profile-card__facts {
@@ -248,7 +245,7 @@ h1 {
   }
 
   .profile-card__mark {
-    width: 84px;
+    width: 112px;
   }
 }
 
