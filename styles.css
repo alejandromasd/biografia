@@ -156,12 +156,15 @@ h1 {
 
 .profile-card__mark {
   display: block;
-  width: 136px;
+  width: 200px;
   aspect-ratio: 1;
+  margin: 0 auto;
   border: 1px solid rgba(124, 92, 46, 0.18);
   border-radius: 50%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 10%;
+  transform: scale(1.12);
+  transform-origin: center center;
   background: var(--surface);
   padding: 0;
 }
@@ -245,7 +248,7 @@ h1 {
   }
 
   .profile-card__mark {
-    width: 112px;
+    width: 132px;
   }
 }
 
