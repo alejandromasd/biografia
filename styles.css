@@ -162,8 +162,8 @@ h1 {
   border: 1px solid rgba(124, 92, 46, 0.18);
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 10%;
-  transform: scale(1.12);
+  object-position: center 0%;
+  transform: scale(1);
   transform-origin: center center;
   background: var(--surface);
   padding: 0;

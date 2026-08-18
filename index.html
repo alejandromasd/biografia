@@ -3,10 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Paco Gomez Gil" />
+    <meta name="theme-color" content="#f4f1eb" />
     <meta
       name="description"
       content="Biografía profesional de Paco Gómez, periodista deportivo vinculado al Elche CF, la radio, la televisión y el marketing digital."
     />
+    <link rel="canonical" href="/" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Biografía de Paco Gómez" />
+    <meta
+      property="og:description"
+      content="Trayectoria profesional de Paco Gómez Gil en periodismo deportivo, radio, televisión y marketing en Elche y Alicante."
+    />
+    <meta property="og:image" content="images/fotoPortada.jpeg" />
+    <meta property="og:site_name" content="Biografía de Paco Gómez" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Biografía de Paco Gómez" />
+    <meta
+      name="twitter:description"
+      content="Periodismo deportivo, radio y televisión en Elche: trayectoria profesional de Paco Gómez Gil."
+    />
+    <meta name="twitter:image" content="images/fotoPortada.jpeg" />
     <title>Biografía de Paco Gómez</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,13 +35,33 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Paco Gomez Gil",
+        "jobTitle": "Periodista deportivo",
+        "description": "Periodista deportivo en Elche con trayectoria en radio, television, direccion de deportes y marketing digital.",
+        "image": "images/fotoPortada.jpeg",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Radio MARCA Elche"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Elche",
+          "addressRegion": "Alicante",
+          "addressCountry": "ES"
+        }
+      }
+    </script>
   </head>
   <body>
     <main class="page-shell">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero__content">
           <p class="eyebrow">Periodismo deportivo · Radio · Televisión · Marketing</p>
-          <h1 id="hero-title">Paco Gómez Gil</h1>
+          <h1 id="hero-title">Paco Gómez</h1>
           <p class="hero__subtitle">Una trayectoria sólida al servicio del deporte ilicitano.</p>
           <p class="hero__lead">
             Referente histórico de Elche y la provincia de Alicante, con una carrera iniciada en 1986 y desarrollada entre
@@ -40,10 +80,18 @@
           </div>
         </div>
 
-        <div class="hero__visual" aria-hidden="true">
+        <div class="hero__visual">
           <div class="profile-card">
             <p class="profile-card__eyebrow">Director de Radio MARCA Elche</p>
-            <img class="profile-card__mark" src="images/fotoPortada.jpeg" alt="Paco Gómez" />
+            <img
+              class="profile-card__mark"
+              src="images/fotoPortada.jpeg"
+              alt="Paco Gómez Gil, periodista deportivo en Elche"
+              width="200"
+              height="200"
+              fetchpriority="high"
+              decoding="async"
+            />
             <dl class="profile-card__facts">
               <div>
                 <dt>Desde 1992</dt>
