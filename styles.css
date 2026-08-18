@@ -46,7 +46,11 @@ body {
   padding: clamp(1.5rem, 4vw, 3rem);
   border: 1px solid var(--line);
   border-radius: 28px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.74));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.86),
+    rgba(255, 255, 255, 0.74)
+  );
   backdrop-filter: blur(16px);
   box-shadow: var(--shadow);
 }
@@ -56,14 +60,22 @@ body {
   padding: clamp(1.25rem, 3vw, 2rem);
   border: 1px solid var(--line);
   border-radius: 24px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.78));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.86),
+    rgba(255, 255, 255, 0.78)
+  );
   box-shadow: var(--shadow);
 }
 
 .panel--accent {
   background:
     radial-gradient(circle at right top, var(--accent-soft), transparent 42%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8));
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.8)
+    );
 }
 
 .panel__header {
@@ -123,7 +135,11 @@ h3 {
   bottom: 0;
   width: 3px;
   border-radius: 999px;
-  background: linear-gradient(180deg, var(--accent), rgba(124, 92, 46, 0.22));
+  background: linear-gradient(
+    180deg,
+    var(--accent),
+    rgba(124, 92, 46, 0.22)
+  );
 }
 
 .timeline__range {
@@ -201,13 +217,27 @@ h3 {
   gap: 0.55rem;
 }
 
+.section-media-stack {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.section-media-stack .section-media {
+  margin: 0;
+}
+
 .section-media__placeholder {
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 12px;
   background:
-    linear-gradient(135deg, rgba(124, 92, 46, 0.08), rgba(17, 24, 39, 0.03)),
+    linear-gradient(
+      135deg,
+      rgba(124, 92, 46, 0.08),
+      rgba(17, 24, 39, 0.03)
+    ),
     repeating-linear-gradient(
       -45deg,
       rgba(124, 92, 46, 0.08),
@@ -257,7 +287,13 @@ h3 {
     grid-column: 1;
   }
 
-  .panel--media .section-media {
+  .panel--media > .section-media {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 0;
+  }
+
+  .panel--media .section-media-stack {
     grid-column: 2;
     grid-row: 2;
     margin-top: 0;
