@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+figure {
+  margin: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -190,16 +194,18 @@ h3 {
 }
 
 .section-media {
-  max-width: 700px;
-  /* margin: 1rem auto 0; */
+  width: 100%;
+  min-width: 0;
+  margin: 1rem 0 0;
   display: grid;
+  gap: 0.55rem;
 }
 
 .section-media__placeholder {
+  width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 12px;
-  border: 1px rgba(124, 92, 46, 0.45);
   background:
     linear-gradient(135deg, rgba(124, 92, 46, 0.08), rgba(17, 24, 39, 0.03)),
     repeating-linear-gradient(
@@ -214,7 +220,7 @@ h3 {
 .section-media__placeholder img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 140%;
   object-fit: cover;
   object-position: center;
 }
@@ -224,6 +230,42 @@ h3 {
   font-size: 0.86rem;
   font-weight: 600;
   color: var(--muted);
+}
+
+@media (min-width: 980px) {
+  .panel--media {
+    display: grid;
+    grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
+    column-gap: 1.4rem;
+    row-gap: 1rem;
+    align-items: start;
+  }
+
+  .panel--media > * {
+    min-width: 0;
+  }
+
+  .panel--media .panel__header {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
+
+  .panel--media .prose,
+  .panel--media .timeline,
+  .panel--media .kpi-grid,
+  .panel--media .milestones {
+    grid-column: 1;
+  }
+
+  .panel--media .section-media {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 0;
+  }
+
+  .panel--media .prose {
+    max-width: none;
+  }
 }
 
 .hero__content {
@@ -301,10 +343,6 @@ h1 {
 .stat-card em {
   font-style: normal;
   color: var(--text);
-}
-
-.hero__chips {
-  display: none;
 }
 
 .hero__visual {
