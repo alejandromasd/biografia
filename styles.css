@@ -524,3 +524,112 @@ h1 {
     max-width: 11ch;
   }
 }
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1.25rem;
+}
+
+.social-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+  padding: 1.15rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.04);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.social-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(124, 92, 46, 0.25);
+  background: var(--surface-strong);
+  box-shadow: 0 16px 40px rgba(17, 24, 39, 0.08);
+}
+
+.social-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.social-card__icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border: 1px solid rgba(124, 92, 46, 0.18);
+  border-radius: 14px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.social-card__content {
+  display: grid;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.social-card__content strong {
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.social-card__content span {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.social-card__arrow {
+  color: var(--accent);
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: transform 180ms ease;
+}
+
+.social-card:hover .social-card__arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 720px) {
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-card {
+    gap: 0.8rem;
+  }
+
+  .social-card__icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+}
